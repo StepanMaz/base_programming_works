@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.Page4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Page4" Height="360" Width="280"
+        MinHeight="360" MinWidth="290" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="&lt;=" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="20" FontFamily="Arial Black" Click="Button_Click_1" Height="40" Width="40" Margin="15,0,0,10"/>
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Content="=" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,75,0,0" Click="Calculate"/>
+            <Button Content="Clear" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="210,125,0,0" Click="Clear"/>
+            <Button Content="&lt;-" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Backspace" Margin="210,175,0,0"/>
+            <Button Content="9" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Press" Margin="0,75,0,0"/>
+            <Button Content="8" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="52,75,0,0"/>
+            <Button Content="7" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="2,75,0,0"/>
+            <Button Content="6" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Press" Margin="0,127,0,0"/>
+            <Button Content="5" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="52,127,0,0"/>
+            <Button Content="4" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="2,127,0,0"/>
+            <Button Content="3" Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Press" Margin="0,177,0,0"/>
+            <Button Content="2" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="52,177,0,0"/>
+            <Button Content="1" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="2,177,0,0"/>
+            <Button Content="0" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="52,227,0,0"/>
+            <Button Content="/" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="160,75,0,0"/>
+            <Button Content="*" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="160,127,0,0"/>
+            <Button Content="+" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="160,177,0,0"/>
+            <Button Content="-" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Press" Margin="160,227,0,0"/>
+            <Button Content="," Width="40" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Press" Margin="0,227,0,0"/>
+        </Grid>
+        <Label x:Name="expression" Content="" Height="40" Margin="50,18,50,0" VerticalAlignment="Top" Background="#FFB4B4B4"/>
+
+    </Grid>
+</Window>

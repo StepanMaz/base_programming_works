@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApp1.Page5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Page5" Height="450" Width="800" WindowStartupLocation="CenterScreen" MinWidth="400" MinHeight="200">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="120" FontSize="24" FontFamily="Arial" TextAlignment="Center"><Run Language="uk-ua" Text="Мазний Степан Валерійович"/><LineBreak/><Run Language="uk-ua" Text="КП-11"/><LineBreak/><Run Language="uk-ua" Text="2022"/></TextBlock>
+        <Button Content="&lt;=" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="20" FontFamily="Arial Black" Click="Button_Click_1" Height="40" Width="40" Margin="15,0,0,15"/>
+
+    </Grid>
+</Window>

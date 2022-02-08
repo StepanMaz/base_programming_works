@@ -1,0 +1,37 @@
+﻿<Window x:Class="WpfApp1.Page1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Page1" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        MinHeight="400" MinWidth="700">
+    <Grid>
+        <Button Content="&lt;=" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="20" FontFamily="Arial Black" Click="Button_Click_1" Height="40" Width="40" Margin="20,0,0,20"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Margin="0,30,0,0" Width="700" x:Name="page1">
+            <TextBlock TextWrapping="Wrap" Margin="20,40,0,0" FontSize="14" TextAlignment="Center" Height="50" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left"><Run Language="ru-ru" Text="Номер з"/><Run Language="uk-ua" Text="алікової"/><LineBreak/><Run Language="uk-ua" Text="книжки"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="155,40,0,0" FontSize="14" TextAlignment="Center" Width="120" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left"><Run Language="uk-ua" Text="ПІП"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="0,40,0,0" FontSize="14" TextAlignment="Center" Text="email" Width="140" Height="50" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Margin="0,40,155,0" FontSize="14" TextAlignment="Center" Width="120" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right"><Run Text="номер телефон"/><Run Language="uk-ua" Text="у"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="0,40,20,0" FontSize="14" TextAlignment="Center" HorizontalAlignment="Right" Width="120" Height="50" VerticalAlignment="Top"><Run Text="в"/><Run Language="uk-ua" Text="ік"/></TextBlock>
+
+            <TextBox x:Name="_1" TextWrapping="Wrap" Margin="20,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Height="30" TextChanged="_1_TextChanged"/>
+            <TextBox x:Name="_2" TextWrapping="Wrap" Margin="155,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" Height="30"/>
+            <TextBox x:Name="_3" TextWrapping="Wrap" Margin="0,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Height="30"/>
+            <TextBox x:Name="_4" TextWrapping="Wrap" Margin="0,90,155,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Height="30"/>
+            <TextBox x:Name="_5" TextWrapping="Wrap" Margin="0,90,20,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Height="30"/>
+            <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Width="120" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center"><Run FontFamily="Arial" Text="Ввід даних"/></TextBlock>
+            <Button Content="Submit" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click_2" Margin="0,130,0,0"/>
+        </Grid>
+        <Grid Margin="-380,230,0,0" Width="300" Height="109" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Button Content="Delete" Width="140" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" Click="Button_Click"/>
+            <TextBox x:Name="del_student" TextWrapping="Wrap" Margin="150,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="120" Height="30"/>
+            <TextBlock TextWrapping="Wrap" Margin="-150,30,0,0" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="120"><Run Text="Введ"/><Run Text="іть "/><Run Language="ru-ru" Text="номер зал"/><Run Language="uk-ua" Text="ікової книжки"/><Run Text=":"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Width="180" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0"><Run FontFamily="Arial" Text="Видалення даних"/></TextBlock>
+        </Grid>
+        <ScrollViewer Margin="380,244,0,20" HorizontalAlignment="Center" HorizontalContentAlignment="Left" Width="300">
+            <Label x:Name="lb" Content="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
