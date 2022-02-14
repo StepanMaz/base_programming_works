@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Prakt_01/1.0.0": {
+        "runtime": {
+          "Prakt_01.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Prakt_01/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

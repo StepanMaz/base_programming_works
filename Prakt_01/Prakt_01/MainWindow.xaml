@@ -1,0 +1,15 @@
+﻿<Window x:Class="Prakt_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakt_01"
+        mc:Ignorable="d"
+        Title="© Практична робота No 1. Основи програмування 1. Методології програмування ЗІБ-зп01" Height="124.496" Width="597.065" ResizeMode="NoResize" FontSize="16" FontFamily="Arial" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="StudyModeBtn" Content="Режим навчання" HorizontalAlignment="Left" Margin="18,47,0,0" VerticalAlignment="Top" Width="158" Click="StudyModeBtn_Click"/>
+        <Button x:Name="ProtectionModeBtn" Content="Режим перевірки" HorizontalAlignment="Left" Margin="211,47,0,0" VerticalAlignment="Top" Width="158" Click="ProtectionModeBtn_Click"/>
+        <Button x:Name="ExitBtn" Content="Вихід із системи" HorizontalAlignment="Left" Margin="405,47,0,0" VerticalAlignment="Top" Width="158" Click="ExitBtn_Click"/>
+        <Label Content="Система автентифікації користувача по Клавіатурному почерку" HorizontalAlignment="Center" Margin="10,10,9.6,0" VerticalAlignment="Top" Width="542" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>
