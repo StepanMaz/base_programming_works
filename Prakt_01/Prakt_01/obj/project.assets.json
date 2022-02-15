@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stepan\\source\\repos\\Prakt_01\\Prakt_01\\Prakt_01.csproj",
+      "projectUniqueName": "D:\\Для_учебы\\base_programming_works\\Prakt_01\\Prakt_01\\Prakt_01.csproj",
       "projectName": "Prakt_01",
-      "projectPath": "C:\\Users\\Stepan\\source\\repos\\Prakt_01\\Prakt_01\\Prakt_01.csproj",
+      "projectPath": "D:\\Для_учебы\\base_programming_works\\Prakt_01\\Prakt_01\\Prakt_01.csproj",
       "packagesPath": "C:\\Users\\Stepan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stepan\\source\\repos\\Prakt_01\\Prakt_01\\obj\\",
+      "outputPath": "D:\\Для_учебы\\base_programming_works\\Prakt_01\\Prakt_01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Stepan\\AppData\\Roaming\\NuGet\\NuGet.Config",

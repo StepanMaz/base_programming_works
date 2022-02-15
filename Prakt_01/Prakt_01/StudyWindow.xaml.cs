@@ -23,7 +23,7 @@ namespace Prakt_01
             VerifField.Text = word;
         }
 
-        bool validate;
+        bool validate = true;
         Stopwatch sw;
         private void InputField_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
@@ -104,7 +104,7 @@ namespace Prakt_01
             {
                 double M = Sum(spans.Count, (j) => spans[j].TotalSeconds) / spans.Count;
                 double S = Sum(spans.Count, (j) => Math.Pow(spans[j].TotalSeconds - M, 2) / (spans.Count - 1));
-                System.IO.File.AppendAllText(@"C:\Users\Stepan\source\repos\Prakt_01\Prakt_01\save.txt", $"{M} {S}\n");
+                System.IO.File.AppendAllText(@"D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\save.txt", $"{M} {S}\n");
             }
             trials--;
             if(trials == 0)

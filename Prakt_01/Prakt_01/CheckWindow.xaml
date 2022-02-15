@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:Prakt_01"
         mc:Ignorable="d"
         Title="Вікно режиму перевірки" Height="294.8" Width="314.4" FontSize="16" FontFamily="Courier New" FontWeight="Bold" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid Background="#FFBEF0E2">
-        <TextBox x:Name="c" TextWrapping="Wrap" Width="200" Margin="57,24,57,0" Height="40" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
-        <Label x:Name="res" Content="" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <Grid Background="#FFBEF0E2">
+    <TextBox x:Name="c" TextWrapping="Wrap" Width="200" Margin="57,24,57,0" Height="40" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
+    <Label x:Name="res" Content="" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Button Content="В меню" Margin="0,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="98" Height="40" Click="Button_Click"/>
 
-    </Grid>
+  </Grid>
 </Window>

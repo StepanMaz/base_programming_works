@@ -27,7 +27,7 @@ namespace Prakt_01
         List<TimeSpan> spans = new List<TimeSpan>();
         bool started = false;
         int leng = 0;
-        bool validate = false;
+        bool validate = true;
         Stopwatch sw;
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -89,8 +89,8 @@ namespace Prakt_01
             double M = Sum(spans.Count, (j) => spans[j].TotalSeconds) / spans.Count;
             double S = Sum(spans.Count, (j) => Math.Pow(spans[j].TotalSeconds - M, 2) / (spans.Count - 1));
 
-            double[] Ms = System.IO.File.ReadAllLines(@"C:\Users\Stepan\source\repos\Prakt_01\Prakt_01\save.txt").Select(t => double.Parse(t.Split(' ')[0])).ToArray();
-            double[] Ss = System.IO.File.ReadAllLines(@"C:\Users\Stepan\source\repos\Prakt_01\Prakt_01\save.txt").Select(t => double.Parse(t.Split(' ')[1])).ToArray();
+            double[] Ms = System.IO.File.ReadAllLines(@"D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\save.txt").Select(t => double.Parse(t.Split(' ')[0])).ToArray();
+            double[] Ss = System.IO.File.ReadAllLines(@"D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\save.txt").Select(t => double.Parse(t.Split(' ')[1])).ToArray();
             bool f = true;
             for (int i = 0; i < Ss.Length; i++)
             {
@@ -98,23 +98,29 @@ namespace Prakt_01
 
                 if(F > 3.18)
                 {
-                    f = false;
                     break;
                 }
                 double S_y = Sum(spans.Count, (j) => Math.Pow(spans[j].TotalSeconds - Ms[i], 2)) / (spans.Count - 1);
                 double S_ = Math.Sqrt((Math.Pow(Ss[i], 2) + Math.Pow(S_y, 2)) * (spans.Count - 1) / (2 * spans.Count - 1));
                 double t = (Ms[i] - M) / (S_ * Math.Sqrt(2 / spans.Count));
-                if (t > student_cof[spans.Count - 2])
+                if (t < student_cof[spans.Count - 2])
                 {
                     f = false;
                 }
             }
-            if (f)
+            if (!f)
             {
                 pos++;
             }
             res.Content = (Math.Round((double)pos / (double)trials * 100)).ToString() + "%" + $" {pos}/{trials}";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            new MainWindow().Show();
+        }
+
         public double Sum(int times, Func<int, double> f)
         {
             double res = 0;

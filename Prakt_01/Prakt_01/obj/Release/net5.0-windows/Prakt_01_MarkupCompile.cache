@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\obj\Debug\net5.0-windows\
+D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\obj\Release\net5.0-windows\
 Prakt_01
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\App.xaml
 3-1843992335
 
@@ -16,5 +16,5 @@ D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\App.xaml
 193-1891726104
 CheckWindow.xaml;MainWindow.xaml;StudyWindow.xaml;
 
-False
+True
 
