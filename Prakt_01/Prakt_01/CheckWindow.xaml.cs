@@ -92,6 +92,7 @@ namespace Prakt_01
             double[] Ms = System.IO.File.ReadAllLines(@"D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\save.txt").Select(t => double.Parse(t.Split(' ')[0])).ToArray();
             double[] Ss = System.IO.File.ReadAllLines(@"D:\Для_учебы\base_programming_works\Prakt_01\Prakt_01\save.txt").Select(t => double.Parse(t.Split(' ')[1])).ToArray();
             bool f = true;
+            int t1 = 0;
             for (int i = 0; i < Ss.Length; i++)
             {
                 double F = Math.Max(Ss[i], S) / Math.Min(Ss[i], S);
@@ -105,6 +106,7 @@ namespace Prakt_01
                 double t = (Ms[i] - M) / (S_ * Math.Sqrt(2 / spans.Count));
                 if (t < student_cof[spans.Count - 2])
                 {
+                    t1++;
                     f = false;
                 }
             }
@@ -113,6 +115,8 @@ namespace Prakt_01
                 pos++;
             }
             res.Content = (Math.Round((double)pos / (double)trials * 100)).ToString() + "%" + $" {pos}/{trials}";
+            p1.Content = "P1 = " + (( Math.Round((trials - (double)pos) / (double)trials * 100))).ToString() + "%";
+            p2.Content = "P2 = " + (Math.Round((double)t1 / ((double)Ss.Length * trials) * 100)).ToString() + "%";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

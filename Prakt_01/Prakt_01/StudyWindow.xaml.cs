@@ -141,7 +141,5 @@ namespace Prakt_01
             trials = CountProtection.SelectedIndex + 3;
             CountProtection.IsEditable = false;
         }
-
-        
     }
 }
