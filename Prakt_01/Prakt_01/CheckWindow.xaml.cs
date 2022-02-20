@@ -102,7 +102,7 @@ namespace Prakt_01
                     break;
                 }
                 double S_y = Sum(spans.Count, (j) => Math.Pow(spans[j].TotalSeconds - Ms[i], 2)) / (spans.Count - 1);
-                double S_ = Math.Sqrt((Math.Pow(Ss[i], 2) + Math.Pow(S_y, 2)) * (spans.Count - 1) / (2 * spans.Count - 1));
+                double S_ = Math.Sqrt((Math.Pow(Ss[i], 1) + Math.Pow(S_y, 1)) * (spans.Count - 1) / (2 * spans.Count - 1));
                 double t = (Ms[i] - M) / (S_ * Math.Sqrt(2 / spans.Count));
                 if (t < student_cof[spans.Count - 2])
                 {
