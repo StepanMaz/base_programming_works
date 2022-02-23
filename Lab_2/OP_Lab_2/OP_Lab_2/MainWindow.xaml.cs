@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.IO;
+using System.Linq;
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Controls;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace OP_Lab_2
@@ -29,29 +21,25 @@ namespace OP_Lab_2
 
         public void Page1_Open_Click(object sender, RoutedEventArgs e)
         {
-            Page_1 page_1 = new Page_1();
-            page_1.Show();
+            new Page_1().Show();
             Hide();
         }
 
         public void Page2_Open_Click(object sender, RoutedEventArgs e)
         {
-            Page_2 page_2 = new Page_2();
-            page_2.Show();
+            new Page_2().Show();
             Hide();
         }
 
         public void Page3_Open_Click(object sender, RoutedEventArgs e)
         {
-            Page_3 page_3 = new Page_3();
-            page_3.Show();
+            new Page_3().Show();
             Hide();
         }
 
         public void Page4_Open_Click(object sender, RoutedEventArgs e)
         {
-            Page_4 page_4 = new Page_4();
-            page_4.Show();
+            new Page_4().Show();
             Hide();
         }
 
@@ -185,27 +173,6 @@ namespace OP_Lab_2
                     tb.Foreground = Brushes.Green;
                 }
             };
-            TextChangedEventHandler delete_check = (s, e) =>
-            {
-                TextBox tb = (TextBox)s;
-                Regex reg = new Regex($"^[0-9]{{{tb.Text.Length}}}$");
-                if (!reg.IsMatch(tb.Text) && tb.Text.Length != 0 || tb.Text.Length == 9)
-                {
-                    MessageBox.Show("Неправильно введений символ.\nСлово має містити 8 цифр");
-                    tb.Text = tb.Text.Substring(0, tb.Text.Length - 1);
-                }
-                if (reg.IsMatch(tb.Text))
-                    if (tb.Text.Length != 8)
-                    {
-                        delete_input_correct = false;
-                        tb.Foreground = Brushes.Red;
-                    }
-                    else
-                    {
-                        delete_input_correct = true;
-                        tb.Foreground = Brushes.Green;
-                    }
-            };
             #endregion
 
             #region Input segment
@@ -258,7 +225,7 @@ namespace OP_Lab_2
             //Eplanetion label
             mainGrid.AddLabelToGrid(size: new Size(w: 130, h: 60), margin: new Margin(b: -175, l: -250), text: "Введіть номер\nзал. книжки", font_size: 17);
             //textbox
-            TextBox delete_input = mainGrid.AddTextBoxToGrid(size: new Size(w: 120, h: 40), margin: new Margin(b: -175, l: 0), func: delete_check);
+            TextBox delete_input = mainGrid.AddTextBoxToGrid(size: new Size(w: 120, h: 40), margin: new Margin(b: -175, l: 0), func: rc1);
             //button
             mainGrid.AddButtonToGrid(size: new Size(w: 120, h: 40), margin: new Margin(b: -175, l: 250), text: "Видалити").Click +=
                 (sender, e) =>
@@ -338,6 +305,7 @@ namespace OP_Lab_2
         public void ButtonPress(int i, int j)
         {
             field[i, j] = Objs.X;
+            buttons[i, j].IsEnabled = false;
             Display();
             if (WinCheck())
             {
@@ -346,6 +314,7 @@ namespace OP_Lab_2
             CountValues();
             int b = values.Cast<int>().ToList().IndexOf(values.Cast<int>().Max());
             field[b / 5, b % 5] = Objs.O;
+            buttons[b / 5, b % 5].IsEnabled = false;
             Display();
             if (WinCheck())
             {
@@ -547,7 +516,7 @@ namespace OP_Lab_2
             mainGrid.AddButtonToGrid(size: new Size(w: 40, h: 40), margin: new Margin(t:  100, l: 100), text: "+", font_size: 20).Click += Add;
             mainGrid.AddButtonToGrid(size: new Size(w: 40, h: 40), margin: new Margin(t:  200, l: 100), text: "-", font_size: 20).Click += Add;
             //coma
-            mainGrid.AddButtonToGrid(size: new Size(w: 40, h: 40), margin: new Margin(t: 200, l: -0), text: ",", font_size: 20).Click += Add;
+            mainGrid.AddButtonToGrid(size: new Size(w: 40, h: 40), margin: new Margin(t:  200, l: -0), text: ",", font_size: 20).Click += Add;
             #endregion
 
             #region Func buttons

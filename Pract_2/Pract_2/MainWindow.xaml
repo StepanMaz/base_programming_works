@@ -1,0 +1,48 @@
+﻿<Window x:Class="Pract_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pract_2"
+        mc:Ignorable="d"
+        Title="Пошук найкоротшого шляху. Мазний, КП-11, 2022." Height="450" Width="800" ResizeMode="NoResize" FontFamily="Georgia" FontSize="16">
+    <Grid x:Name="MyGrid" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="MyCanvas" Margin="50,40,50,40" Width="500" Height="350"/>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="9*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Кількість пунктів" Grid.Row="0" BorderThickness="1" BorderBrush="Black" FontFamily="Book Antiqua" FontSize="16" ></Label>
+            <ComboBox x:Name="NumElemCB" Grid.Row="1" SelectedIndex="0" SelectionChanged="NumElemCB_SelectionChanged" FontFamily="Book Antiqua" FontSize="16">
+                <ListBoxItem Content="5" />
+                <ListBoxItem Content="10"/>
+                <ListBoxItem Content="20"/>
+                <ListBoxItem Content="50"/>
+                <ListBoxItem Content="100"/>
+                <ListBoxItem Content="200"/>
+                <ListBoxItem Content="500"/>
+            </ComboBox>
+            <Label Content="Швидкість, у мс" Grid.Row="2" BorderThickness="1" BorderBrush="Black" FontFamily="Book Antiqua" FontSize="16"></Label>
+            <ComboBox x:Name="VelCB" Grid.Row="3" SelectedIndex="0" SelectionChanged="VelCB_SelectionChanged" FontFamily="Book Antiqua" FontSize="16">
+                <ListBoxItem Content="1000"/>
+                <ListBoxItem Content="500"/>
+                <ListBoxItem Content="200"/>
+                <ListBoxItem Content="100"/>
+                <ListBoxItem Content="50"/>
+                <ListBoxItem Content="10"/>
+                <ListBoxItem Content="5"/>
+                <ListBoxItem Content="1"/>
+            </ComboBox>
+            <Button x:Name="StopStart" Content="Запустити / Зупинити" Grid.Row="4" Click="StopStart_Click" FontFamily="BookAntiqua" FontSize="16"></Button>
+        </Grid>
+    </Grid>
+</Window>
