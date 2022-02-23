@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Stepan\\source\\repos\\Pract_2\\Pract_2\\Pract_2.csproj": {}
+    "D:\\Для_учебы\\base_programming_works\\Pract_2\\Pract_2\\Pract_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Stepan\\source\\repos\\Pract_2\\Pract_2\\Pract_2.csproj": {
+    "D:\\Для_учебы\\base_programming_works\\Pract_2\\Pract_2\\Pract_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Stepan\\source\\repos\\Pract_2\\Pract_2\\Pract_2.csproj",
+        "projectUniqueName": "D:\\Для_учебы\\base_programming_works\\Pract_2\\Pract_2\\Pract_2.csproj",
         "projectName": "Pract_2",
-        "projectPath": "C:\\Users\\Stepan\\source\\repos\\Pract_2\\Pract_2\\Pract_2.csproj",
+        "projectPath": "D:\\Для_учебы\\base_programming_works\\Pract_2\\Pract_2\\Pract_2.csproj",
         "packagesPath": "C:\\Users\\Stepan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Stepan\\source\\repos\\Pract_2\\Pract_2\\obj\\",
+        "outputPath": "D:\\Для_учебы\\base_programming_works\\Pract_2\\Pract_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Stepan\\AppData\\Roaming\\NuGet\\NuGet.Config",

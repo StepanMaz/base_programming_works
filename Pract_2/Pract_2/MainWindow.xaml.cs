@@ -40,31 +40,31 @@ namespace Pract_2
         {
             //circle
 
-            //int counterx = 0;
-            //int countery = 0;
-            //InitPoints(() =>
-            //{
-            //    double x = MyCanvas.Width / 2 + Math.Cos(2 * Math.PI * counterx / PointCount) * 100;
-            //    counterx++;
-            //    return x;
-            //},
-            //() =>
-            //{
-            //    double y = MyCanvas.Height / 2 + Math.Sin(2 * Math.PI * countery / PointCount) * 170;
-            //    countery++;
-            //    return y;
-            //});
-
-            //random
-            Random rnd = new Random();
+            int counterx = 0;
+            int countery = 0;
             InitPoints(() =>
             {
-                return rnd.Next(Radius, (int)MyCanvas.Width - Radius);
+                double x = MyCanvas.Width / 2 + Math.Cos(2 * Math.PI * counterx / PointCount) * 100;
+                counterx++;
+                return x;
             },
             () =>
             {
-                return rnd.Next(Radius, (int)MyCanvas.Height - Radius);
+                double y = MyCanvas.Height / 2 + Math.Sin(2 * Math.PI * countery / PointCount) * 170;
+                countery++;
+                return y;
             });
+
+            //random
+            //Random rnd = new Random();
+            //InitPoints(() =>
+            //{
+            //    return rnd.Next(Radius, (int)MyCanvas.Width - Radius);
+            //},
+            //() =>
+            //{
+            //    return rnd.Next(Radius, (int)MyCanvas.Height - Radius);
+            //});
         }
 
         private void InitPoints(Func<double> x, Func<double> y)
@@ -138,10 +138,12 @@ namespace Pract_2
             if (dT.IsEnabled)
             {
                 dT.Stop();
+                Alg.IsEnabled = true;
                 NumElemCB.IsEnabled = true;
             }
             else
             {
+                Alg.IsEnabled = false;
                 NumElemCB.IsEnabled = false;
                 dT.Start();
             }
@@ -161,10 +163,24 @@ namespace Pract_2
             PointCount = Convert.ToInt32(item.Content);
             InitPoints();
         }
+
+
+        private void Alg_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox CB = (ComboBox)e.Source;
+            ListBoxItem item = (ListBoxItem)CB.SelectedItem;
+            switch (item.Content)
+            {
+                case "Evolution":
+                    algorithm = new EvolutionAlgorithm();
+                    break;
+                case "Greedy":
+                    algorithm = new GreedyAlgorithm();
+                    break;
+            }
+            algorithm.Init(pC);
+        }
         #endregion
-
-
-
 
         #region Algoritms
         public abstract class Algorithm
@@ -226,6 +242,7 @@ namespace Pract_2
                 sum += distances[indexes.Last(), indexes.First()];
                 return sum;
             }
+
 
             private int[] BuildWay(int start)
             {

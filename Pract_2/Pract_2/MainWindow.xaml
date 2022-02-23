@@ -32,7 +32,7 @@
                 <ListBoxItem Content="500"/>
             </ComboBox>
             <Label Content="Швидкість, у мс" Grid.Row="2" BorderThickness="1" BorderBrush="Black" FontFamily="Book Antiqua" FontSize="16"></Label>
-            <ComboBox x:Name="VelCB" Grid.Row="3" SelectedIndex="0" SelectionChanged="VelCB_SelectionChanged" FontFamily="Book Antiqua" FontSize="16">
+            <ComboBox x:Name="VelCB" Grid.Row="2" SelectedIndex="0" SelectionChanged="VelCB_SelectionChanged" FontFamily="Book Antiqua" FontSize="16" Height="31" Margin="0,31,0,0" Grid.RowSpan="2" VerticalAlignment="Top">
                 <ListBoxItem Content="1000"/>
                 <ListBoxItem Content="500"/>
                 <ListBoxItem Content="200"/>
@@ -42,7 +42,11 @@
                 <ListBoxItem Content="5"/>
                 <ListBoxItem Content="1"/>
             </ComboBox>
-            <Button x:Name="StopStart" Content="Запустити / Зупинити" Grid.Row="4" Click="StopStart_Click" FontFamily="BookAntiqua" FontSize="16"></Button>
+            <Button x:Name="StopStart" Content="Запустити / Зупинити" Grid.Row="4" Click="StopStart_Click" FontFamily="BookAntiqua" FontSize="16" Margin="0,26,0,240" Grid.RowSpan="2"></Button>
+            <ComboBox x:Name="Alg" Grid.Row="3" SelectedIndex="0" FontFamily="Book Antiqua" FontSize="16" Margin="0,30,0,0" Grid.RowSpan="2" SelectionChanged="Alg_SelectionChanged" VerticalAlignment="Top">
+                <ListBoxItem Content="Evolution"/>
+                <ListBoxItem Content="Greedy"/>
+            </ComboBox>
         </Grid>
     </Grid>
 </Window>
