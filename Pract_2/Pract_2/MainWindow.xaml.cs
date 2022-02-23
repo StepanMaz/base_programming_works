@@ -40,31 +40,25 @@ namespace Pract_2
         {
             //circle
 
-            int counterx = 0;
-            int countery = 0;
-            InitPoints(() =>
-            {
-                double x = MyCanvas.Width / 2 + Math.Cos(2 * Math.PI * counterx / PointCount) * 100;
-                counterx++;
-                return x;
-            },
-            () =>
-            {
-                double y = MyCanvas.Height / 2 + Math.Sin(2 * Math.PI * countery / PointCount) * 170;
-                countery++;
-                return y;
-            });
-
-            //random
-            //Random rnd = new Random();
+            //int counterx = 0;
+            //int countery = 0;
             //InitPoints(() =>
             //{
-            //    return rnd.Next(Radius, (int)MyCanvas.Width - Radius);
+            //    double x = MyCanvas.Width / 2 + Math.Cos(2 * Math.PI * counterx / PointCount) * 100;
+            //    counterx++;
+            //    return x;
             //},
             //() =>
             //{
-            //    return rnd.Next(Radius, (int)MyCanvas.Height - Radius);
+            //    double y = MyCanvas.Height / 2 + Math.Sin(2 * Math.PI * countery / PointCount) * 170;
+            //    countery++;
+            //    return y;
             //});
+
+            //random
+            Random rnd = new Random();
+            InitPoints(() => rnd.Next(Radius, (int)MyCanvas.Width - Radius),
+                       () => rnd.Next(Radius, (int)MyCanvas.Height - Radius));
         }
 
         private void InitPoints(Func<double> x, Func<double> y)
@@ -280,7 +274,7 @@ namespace Pract_2
         class EvolutionAlgorithm : Algorithm
         {
             Random rnd = new Random();
-            const int populations = 4;
+            const int populations = 10;
             List<int[]> ways;
             PointCollection points;
             public override void Init(PointCollection pC)
