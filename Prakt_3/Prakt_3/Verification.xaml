@@ -1,0 +1,20 @@
+﻿<Window x:Class="Prakt_3.Verification"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakt_3"
+        mc:Ignorable="d"
+        Title="Verification" Height="320" Width="300" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="Login" TextWrapping="Wrap" Margin="0,75,10,0" Width="150" FontSize="16" TextChanged="Login_TextChanged" HorizontalAlignment="Right" VerticalAlignment="Top" Height="30"/>
+        <TextBlock TextWrapping="Wrap" Margin="10,75,0,0" FontSize="16" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110"><Run Text="Введіть логін"/><Run Language="uk-ua" Text=":"/></TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="10,140,0,0" FontSize="16" Height="30" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Введіть "/><Run Language="uk-ua" Text="пароль"/><Run Text=":"/></TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="10,10,10,0" Width="280" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" TextAlignment="Center" FontWeight="Bold" FontStyle="Italic"><Run Language="uk-ua" Text="Підтвердіть свою особу"/></TextBlock>
+        <Label x:Name="TriesAmount" Content="Кількість спроб: 3" Margin="10,197,0,0" FontStyle="Italic" Height="30" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="Password" Width="150" Height="30" Margin="0,140,10,0" Password="" PasswordChanged ="Password_TextChanged" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBlock Text="Коли кількість спроб досягне '0' дане програмне забезпечення буде закрите" TextWrapping="Wrap" Margin="10,227,10,10" FontStyle="Italic" Opacity="0.8" FontFamily="Sitka Text" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" TextAlignment="Center"/>
+        <Button x:Name="EnterButton" IsEnabled="False" Content="Війти" Margin="175,197,0,0" Width="80" Height="30" Click="EnterClick" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

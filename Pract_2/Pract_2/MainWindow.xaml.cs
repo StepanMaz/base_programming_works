@@ -44,7 +44,7 @@ namespace Pract_2
             //int countery = 0;
             //InitPoints(() =>
             //{
-            //    double x = MyCanvas.Width / 2 + Math.Cos(2 * Math.PI * counterx / PointCount) * 100;
+            //    double x = MyCanvas.Width / 2 + Math.Cos(2 * Math.PI * counterx / PointCount) * 170;
             //    counterx++;
             //    return x;
             //},
