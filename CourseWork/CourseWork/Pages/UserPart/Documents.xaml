@@ -1,0 +1,17 @@
+﻿<Page x:Class="CourseWork.Pages.UserPart.Documents"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseWork.Pages.UserPart"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Documents">
+
+    <Grid>
+        <DataGrid x:Name="PassportsTable"  Width="250" Height="300" Style="{StaticResource GridStyle}" Margin="75,75,0,75" HorizontalAlignment="Left"/>
+        <DataGrid x:Name="VisaTable"       Width="250" Height="300" Style="{StaticResource GridStyle}" Margin="0,75,75,75" HorizontalAlignment="Right"/>
+        <TextBlock x:Name="NoPassports" Visibility="Hidden" Text="Немає паспортів" TextWrapping="Wrap" Width="200" Height="47" FontSize="20" TextAlignment="Center" Margin="100,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock x:Name="NoVisas"     Visibility="Hidden" Text="Немає віз"       TextWrapping="Wrap" Width="200" Height="47" FontSize="20" TextAlignment="Center" Margin="0,210,100,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+    </Grid>
+</Page>

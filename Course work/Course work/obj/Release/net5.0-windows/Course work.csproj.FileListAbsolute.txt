@@ -1,0 +1,33 @@
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Course work.exe
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Course work.deps.json
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Course work.runtimeconfig.json
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Course work.runtimeconfig.dev.json
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Course work.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\ref\Course work.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Course work.pdb
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\System.Drawing.Common.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\win-x64\native\sni.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\win-x86\native\sni.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\bin\Release\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\MainWindow.g.cs
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\App.g.cs
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work_MarkupCompile.cache
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work_MarkupCompile.lref
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\MainWindow.baml
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.g.resources
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.GeneratedMSBuildEditorConfig.editorconfig
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.AssemblyInfoInputs.cache
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.AssemblyInfo.cs
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.csproj.CoreCompileInputs.cache
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.csproj.CopyComplete
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\ref\Course work.dll
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.pdb
+D:\Для_учебы\base_programming_works\Course work\Course work\obj\Release\net5.0-windows\Course work.genruntimeconfig.cache
