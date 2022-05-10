@@ -34,7 +34,7 @@ namespace CourseWork.Pages.UserPart
 
         private void AddTourClick(object sender, RoutedEventArgs e)
         {
-            MainWindow.WindowFrame.Navigate(new TourApplication());
+            MainWindow.WindowFrame.Navigate(new TourApplication(id));
         }
     }
 }

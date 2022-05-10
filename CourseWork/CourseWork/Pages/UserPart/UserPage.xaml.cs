@@ -46,11 +46,7 @@ namespace CourseWork.Pages.UserPart
                 {
                     if((string)e.Column.Header == "RegestrationDate")
                     {
-                        DataGridTextColumn textClm = new DataGridTextColumn();
-                        Binding binding = new Binding("RegestrationDate");
-                        binding.StringFormat = "dd-MM-yyyy";
-                        textClm.Binding = binding;
-                        e.Column = textClm;
+                        e.Column = Additionals.ContolsSettings.AddFormat(e.Column, "yyyy MMMM d");
                     }
                     else if ((string)e.Column.Header == "ClientId")
                     {

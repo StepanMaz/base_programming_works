@@ -13,25 +13,10 @@
     <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\TourPart\CountryPage.xaml.cs">
+    <Compile Update="Pages\TourPart\TourConstituents.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\TourPart\RouteInfoPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\TourPart\RoutePage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\TourPart\TourEnumeration.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\TourPart\TourPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\TourPart\TourPartNav.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Pages\TourPart\CityPage.xaml.cs">
+    <Compile Update="Pages\UserPart\ApplymentOnTourPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\UserPart\Client.xaml.cs">
@@ -60,25 +45,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\TourPart\CountryPage.xaml">
+    <Page Update="Pages\TourPart\TourConstituents.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\TourPart\RouteInfoPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\TourPart\RoutePage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\TourPart\TourEnumeration.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\TourPart\TourPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\TourPart\TourPartNav.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\TourPart\CityPage.xaml">
+    <Page Update="Pages\UserPart\ApplymentOnTourPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\Client.xaml">

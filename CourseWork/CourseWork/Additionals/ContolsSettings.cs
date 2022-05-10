@@ -5,11 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Collections;
+using System.Windows.Data;
 
 namespace CourseWork.Additionals
 {
     public static class ContolsSettings
     {
+        public static DataGridTextColumn AddFormat(DataGridColumn column, string format)
+        {
+            return new DataGridTextColumn() { Binding = new Binding((string)column.Header) { StringFormat = format } };
+        }
+
+        public static void AddWrap(DataGridTextColumn column)
+        {
+            column.ElementStyle = new Style() { Setters = { new Setter() { Property = TextBlock.TextWrappingProperty, Value = TextWrapping.Wrap } } };
+        }
         public static void ColumnsNaming(object sender, EventArgs e, params string[] names)
         {
             Structure(sender, names.Length, (clmn, i) => clmn.Header = names[i]);

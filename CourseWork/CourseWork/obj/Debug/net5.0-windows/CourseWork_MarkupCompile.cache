@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 D:\Для_учебы\base_programming_works\CourseWork\CourseWork\App.xaml
-15-1845329537
+10-1286384110
 
-20-1896189105
+16-271532083
 194146648270
-MainPage.xaml;MainWindow.xaml;Pages\TourPart\CityPage.xaml;Pages\TourPart\CountryPage.xaml;Pages\TourPart\RouteInfoPage.xaml;Pages\TourPart\RoutePage.xaml;Pages\TourPart\TourEnumeration.xaml;Pages\TourPart\TourPage.xaml;Pages\TourPart\TourPartNav.xaml;Pages\UserPart\Client.xaml;Pages\UserPart\Documents.xaml;Pages\UserPart\TasksPage.xaml;Pages\UserPart\TourApplication.xaml;Pages\UserPart\UserNav.xaml;Pages\UserPart\UserPage.xaml;
+MainPage.xaml;MainWindow.xaml;Pages\TourPart\TourConstituents.xaml;Pages\UserPart\ApplymentOnTourPage.xaml;Pages\UserPart\Client.xaml;Pages\UserPart\Documents.xaml;Pages\UserPart\TasksPage.xaml;Pages\UserPart\TourApplication.xaml;Pages\UserPart\UserNav.xaml;Pages\UserPart\UserPage.xaml;
 
 False
 

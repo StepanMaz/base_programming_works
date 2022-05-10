@@ -24,9 +24,15 @@ namespace CourseWork
         {
             InitializeComponent();
             WindowFrame ??= Main;
-            var page = new MainPage();
-            page.IsVisibleChanged += (s, e) => Return.Visibility = (!(bool)e.NewValue) ? Visibility.Visible : Visibility.Hidden;
-            WindowFrame.Content = page;
+            WindowFrame.Navigated += 
+                (s, e) =>
+                {
+                    if (!WindowFrame.CanGoBack)
+                        Return.Visibility = Visibility.Hidden;
+                    else
+                        Return.Visibility = Visibility.Visible;
+                };
+            WindowFrame.Content = new MainPage();
         }
 
         private void ReturnClick(object sender, RoutedEventArgs e)
