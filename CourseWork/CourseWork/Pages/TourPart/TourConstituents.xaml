@@ -9,7 +9,7 @@
       Title="TourConstituents">
 
     <Grid>
-        <DataGrid x:Name="MainTable" Style="{StaticResource GridStyle}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="500" Margin="50,0,0,0" Height="350"/>
+        <DataGrid x:Name="MainTable" HorizontalAlignment="Left" VerticalAlignment="Center" Width="500" Margin="50,0,0,0" Height="350"/>
         <ComboBox x:Name="CollectionComboBox" Width="150" Margin="0,100,50,0" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" SelectionChanged="SelectedTableChanged"/>
     </Grid>
 </Page>

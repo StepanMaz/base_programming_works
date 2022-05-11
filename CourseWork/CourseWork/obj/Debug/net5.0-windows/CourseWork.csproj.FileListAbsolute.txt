@@ -46,3 +46,5 @@ D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5
 D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.baml
 D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\TourConstituents.g.cs
 D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\TourConstituents.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Orders.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Orders.baml

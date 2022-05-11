@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="Pages\UserPart\addimage.png" />
+    <None Remove="Pages\UserPart\Orders.xaml~RF1ead7579.TMP" />
     <None Remove="Pages\UserPart\UserPage.xaml.cs~RF16f84acc.TMP" />
   </ItemGroup>
 

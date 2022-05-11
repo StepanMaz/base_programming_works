@@ -9,7 +9,13 @@
       Title="Client">
 
     <Grid>
-        <Button Click="DocumntsClick" Content="Документи" Width="120" Style="{StaticResource UsualButton}" Margin="15,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Button Click="AddTourClick" Content="Додати тур" Width="120" Style="{StaticResource UsualButton}" Margin="15,65,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0">
+            <Button Click="DocumntsClick" Content="Документи" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
+            <Button Click="AddTourClick" Content="Додати тур" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
+            <Button Click="OrderClick" Content="Замовлення" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
+            <Button Click="ToursClick" Content="Тури" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
+        </StackPanel>
+        <DataGrid x:Name="ClientTable" Height="300" Width="400" Visibility="Hidden"/>
+        <Button x:Name="Back" Click="BackClick" Content="Назад" Visibility="Hidden" Style="{StaticResource MiddleSizedButton}" Margin="605,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Grid>
 </Page>

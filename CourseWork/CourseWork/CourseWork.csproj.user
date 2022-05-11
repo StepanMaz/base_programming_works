@@ -25,6 +25,9 @@
     <Compile Update="Pages\UserPart\Documents.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\UserPart\Orders.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\UserPart\TasksPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +58,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\Documents.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\Orders.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\TasksPage.xaml">

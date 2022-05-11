@@ -81,7 +81,7 @@ namespace CourseWork.Pages.TourPart
                 {
                 (new RoutedEventHandler((s, e) => MainWindow.WindowFrame.Navigate(new TourConstituents((int)((s as Button).DataContext as DataRowView).Row[0], "TourId", "Tour"))), "Детальніше")
                 },
-                dates = new setting<string>[]{("Start", 3), ("[End]", 4) },
+                dates = new setting<(string, bool)>[]{(("Start", false), 3), (("[End]", false), 4) },
                 links = new setting<TableLink>[]
                 {
                     (new TableLink(GetDict("RouteId", "Name", ToTable("Route")), "RouteId"), 1)
@@ -90,7 +90,7 @@ namespace CourseWork.Pages.TourPart
             {"InaccessibleCountries",   new DatePickerTableSettings()
             {
                 headers =      new setting<string>[]     {"Від", "До", "Країна"},
-                dates = new setting<string>[]{("DateFrom", 0), ("DateTo", 1) },
+                dates = new setting<(string, bool)>[]{(("DateFrom", false), 0), (("DateTo", false), 1) },
                 readonlies = new setting<bool>[]{(true, 2)},
                 links = new setting<TableLink>[]
                 {

@@ -28,7 +28,8 @@ namespace CourseWork.Pages.TourPart
 
     #region table settings
     public class TableSettings
-    { 
+    {
+        public double? height;
         public setting<string>[]         headers;
         public setting<DataGridLength>[] lengths;
         public setting<Visibility>[]     visibilities;
@@ -41,6 +42,10 @@ namespace CourseWork.Pages.TourPart
         {
             grid ??= dataGrid;
             columns ??= dataGrid.Columns;
+
+            grid.MinRowHeight = 25;
+            if (height != null)
+                grid.RowHeight = (double)height;
 
             Iterate(headers, (i, v) => columns[i].Header = v);
             Iterate(lengths, (i, v) => columns[i].Width = v);
@@ -85,18 +90,18 @@ namespace CourseWork.Pages.TourPart
 
     public class DatePickerTableSettings : ButtonedTableSettings
     {
-        public setting<string>[] dates;
+        public setting<(string binding, bool @readonly)>[] dates;
 
         public override void Apply(DataGrid dataGrid)
         {
             grid ??= dataGrid;
             columns ??= dataGrid.Columns;
-            Iterate(dates, (i, v) => columns[i] = GetDatePickerColumn(v));
+            Iterate(dates, (i, v) => columns[i] = GetDatePickerColumn(v.binding, v.@readonly));
 
             base.Apply(dataGrid);
         }
 
-        public DataGridTemplateColumn GetDatePickerColumn(string binding)
+        public DataGridTemplateColumn GetDatePickerColumn(string binding, bool @readonly)
         {
             Binding templateColumnBinding = new Binding(binding);
             templateColumnBinding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
@@ -104,6 +109,7 @@ namespace CourseWork.Pages.TourPart
             FrameworkElementFactory datePickerFactoryElem = new FrameworkElementFactory(typeof(DatePicker));
             datePickerFactoryElem.SetValue(DatePicker.SelectedDateProperty, templateColumnBinding);
             datePickerFactoryElem.SetValue(DatePicker.DisplayDateProperty, templateColumnBinding);
+            datePickerFactoryElem.SetValue(DatePicker.IsEnabledProperty, !@readonly);
             DataTemplate cellTemplate = new DataTemplate();
             cellTemplate.VisualTree = datePickerFactoryElem;
             DataGridTemplateColumn templateColumn = new DataGridTemplateColumn();

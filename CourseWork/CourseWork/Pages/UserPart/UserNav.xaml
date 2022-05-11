@@ -9,7 +9,10 @@
       Title="UserNav">
 
     <Grid>
-        <Button Click="UserClick" Content="Клієнт" Style="{StaticResource UsualButton}"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="UserClick" Content="Клієнт"  Width="100" Style="{StaticResource MiddleSizedButton}"/>
+            <Button Click="AddClientClick" Content="Додати клієнта" Width="100" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
+        </StackPanel>
 
     </Grid>
 </Page>
