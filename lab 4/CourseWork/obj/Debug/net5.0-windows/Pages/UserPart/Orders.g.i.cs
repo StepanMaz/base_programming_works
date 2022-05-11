@@ -69,7 +69,7 @@ namespace CourseWork.Pages.UserPart {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/pages/userpart/orders.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CourseWork;V1.0.0.0;component/pages/userpart/orders.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\UserPart\Orders.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

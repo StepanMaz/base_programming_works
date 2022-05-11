@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j/m4c9WE8ttYvGeYuCwTcrzSQShHJUWEiB8Xk6/OEd6+03o5YXq9JMMn4YhFUg9sxlOnF0u8Vv4b7aPUg7SRXQ==",
+  "dgSpecHash": "yUO6mnHgViRC2HVb+SUfQwLallHUXttX9ZO539ePlpkOrrBottl5qtaJVva+3SXggiOz8U6IkXuFf6DJ0ygIRQ==",
   "success": true,
-  "projectFilePath": "D:\\Для_учебы\\base_programming_works\\CourseWork\\CourseWork\\CourseWork.csproj",
+  "projectFilePath": "D:\\Для_учебы\\base_programming_works\\lab 4\\CourseWork\\CourseWork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stepan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Stepan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
