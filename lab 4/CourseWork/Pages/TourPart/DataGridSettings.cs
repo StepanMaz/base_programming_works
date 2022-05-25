@@ -1,15 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
-using System.Windows.Data;
 using System.Windows.Controls;
-using System.Collections.Generic;
+using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using System.Collections.ObjectModel;
-
 using static CourseWork.DBController;
-using System.Globalization;
 
 namespace CourseWork.Pages.TourPart
 {
@@ -30,17 +30,24 @@ namespace CourseWork.Pages.TourPart
     public class TableSettings
     {
         public double? height;
-        public setting<string>[]         headers;
+        public setting<string>[] headers;
         public setting<DataGridLength>[] lengths;
-        public setting<Visibility>[]     visibilities;
-        public setting<bool>[]           readonlies;
+        public setting<Visibility>[] visibilities;
+        public setting<bool>[] readonlies;
+
+        public Dictionary<Key, Action<object, KeyEventArgs>> keyPresses;
+        public EventHandler<DataGridRowEditEndingEventArgs> insert, update;
 
         protected DataGrid grid;
         protected ObservableCollection<DataGridColumn> columns;
 
+        protected EventHandler sourceChanged;
+        public void CallEvent(){sourceChanged.Invoke(null, null); sourceChanged = null; }
+
         public virtual void Apply(DataGrid dataGrid)
         {
             grid ??= dataGrid;
+
             columns ??= dataGrid.Columns;
 
             grid.MinRowHeight = 25;
@@ -51,6 +58,39 @@ namespace CourseWork.Pages.TourPart
             Iterate(lengths, (i, v) => columns[i].Width = v);
             Iterate(visibilities, (i, v) => columns[i].Visibility = v);
             Iterate(readonlies, (i, v) => columns[i].IsReadOnly = v);
+
+            InitEvents();
+        }
+
+        private void InitEvents()
+        {
+            KeyEventHandler del =
+                (s, e) =>
+                {
+                    if (keyPresses.ContainsKey(e.Key))
+                        keyPresses[e.Key].Invoke(s, e);
+                };
+
+            grid.PreviewKeyDown += del;
+            grid.RowEditEnding += EditEnded;
+
+            sourceChanged +=
+                (s, e) =>
+                {
+                    grid.PreviewKeyDown -= del;
+                    grid.RowEditEnding -= EditEnded;
+                };
+        }
+
+        private void EditEnded(object sender, DataGridRowEditEndingEventArgs e)
+        {
+            (sender as DataGrid).RowEditEnding -= EditEnded;
+            grid.CommitEdit();
+            if (e.Row.IsNewItem)
+                insert.Invoke(sender, e);
+            else
+                update.Invoke(sender, e);
+            (sender as DataGrid).RowEditEnding += EditEnded;
         }
 
         public virtual void ReworkTable(DataTable table) { }
@@ -127,7 +167,7 @@ namespace CourseWork.Pages.TourPart
             grid ??= dataGrid;
             columns ??= dataGrid.Columns;
             Iterate(buttons, (i, v) => columns[i] = GetButtonColumn(v.handler, v.name));
-            
+
             base.Apply(dataGrid);
         }
 
@@ -210,8 +250,8 @@ namespace CourseWork.Pages.TourPart
              };
             grid.LoadingRow += handler;
             grid.UnloadingRow += unloadhandler;
-            grid.SourceUpdated += (s, e) =>
-            { 
+            sourceChanged += (s, e) =>
+            {
                 grid.LoadingRow -= handler;
                 grid.UnloadingRow -= unloadhandler;
             };
@@ -240,7 +280,7 @@ namespace CourseWork.Pages.TourPart
             column.ItemsSource = values.Values;
             column.SelectedItemBinding = new Binding(binding)
             {
-                Converter = new LinkConverter() { source = values},
+                Converter = new LinkConverter() { source = values },
                 Mode = BindingMode.TwoWay
             };
             grid.Columns[clmn] = column;

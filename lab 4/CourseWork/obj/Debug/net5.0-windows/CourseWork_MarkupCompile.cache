@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\
 CourseWork
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\Для_учебы\base_programming_works\CourseWork\CourseWork\App.xaml
-11-534034303
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\App.xaml
+12353095822
 
-17-1545466166
-194146648270
-MainPage.xaml;MainWindow.xaml;Pages\TourPart\TourConstituents.xaml;Pages\UserPart\ApplymentOnTourPage.xaml;Pages\UserPart\Client.xaml;Pages\UserPart\Documents.xaml;Pages\UserPart\Orders.xaml;Pages\UserPart\TasksPage.xaml;Pages\UserPart\TourApplication.xaml;Pages\UserPart\UserNav.xaml;Pages\UserPart\UserPage.xaml;
+191263048432
+197814040865
+MainPage.xaml;MainWindow.xaml;Pages\ReportPart\ReportPage.xaml;Pages\TourPart\TourConstituents.xaml;Pages\UserPart\ApplymentOnTourPage.xaml;Pages\UserPart\Client.xaml;Pages\UserPart\Documents.xaml;Pages\UserPart\Orders.xaml;Pages\UserPart\TasksPage.xaml;Pages\UserPart\TourApplication.xaml;Pages\UserPart\UserNav.xaml;Pages\UserPart\UserPage.xaml;
 
 False
 

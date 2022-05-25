@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using static CourseWork.DBController;
 
 namespace CourseWork.Pages.TourPart
@@ -24,19 +25,33 @@ namespace CourseWork.Pages.TourPart
             {
                 headers =      new setting<string>[]     {"Id", "Абревіатура", "Тип", "Опис"},
                 visibilities = new setting<Visibility>[] {(Visibility.Hidden, 0)},
-                readonlies =   new setting<bool>[]       {(true, 0)}
+                readonlies =   new setting<bool>[]       {(true, 0)},
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "MealType", "MealTypeId")}
+                },
+                insert = new EventHandler<DataGridRowEditEndingEventArgs>((s, e) => InsertValues("MealType", (e.Row.Item as DataRowView).Row, "Abbreviation", "Type", "Description")),
+                update = new EventHandler<DataGridRowEditEndingEventArgs>((s, e) => UpdateValues("MealType", (e.Row.Item as DataRowView).Row, $"MealTypeId = '{(e.Row.Item as DataRowView).Row.ItemArray[0]}'", "Abbreviation", "Type", "Description", "InUse"))
             }},
             {"TravelWay",               new TableSettings()
             {
                 headers =      new setting<string>[]     {"Id", "Назва"},
                 visibilities = new setting<Visibility>[] {(Visibility.Hidden, 0)},
-                readonlies =   new setting<bool>[]       {(true, 0)}
+                readonlies =   new setting<bool>[]       {(true, 0)},
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "TravelWay", "TravelWayId")}
+                }
             }},
             {"AdditionalType",          new TableSettings()
             {
                 headers =      new setting<string>[]     {"Id", "Тип", "У використанні"},
                 visibilities = new setting<Visibility>[] {(Visibility.Hidden, 0)},
-                readonlies =   new setting<bool>[]       {(true, 0)}
+                readonlies =   new setting<bool>[]       {(true, 0)},
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "AdditionalType", "AddTypeId")}
+                }
             }},
             {"City",                    new ImageTableSettins()
             {
@@ -48,7 +63,11 @@ namespace CourseWork.Pages.TourPart
                 {
                     (new TableLink(GetDict("CountryId", "NameUA", ToTable("Country")), "CountryId"), 1)
                 },
-                images = new setting<(string, string)>[] {(("SELECT Image FROM City", "CityId"), 3) }
+                images = new setting<(string, string)>[] {(("SELECT Image FROM City", "CityId"), 3) },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "City", "CityId")}
+                }
             }},
             {"Country",                 new ImageTableSettins()
             {
@@ -57,7 +76,11 @@ namespace CourseWork.Pages.TourPart
                 {
                     (new RoutedEventHandler((s, e) => MainWindow.WindowFrame.Navigate(new TourConstituents((int)((s as Button).DataContext as DataRowView).Row[0], "CountryId", "Country"))), "Детальніше")
                 },
-                images = new setting<(string, string)>[] {(("SELECT Image FROM Country", "CountryId"), 2) }
+                images = new setting<(string, string)>[] {(("SELECT Image FROM Country", "CountryId"), 2) },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "Country", "CountryId")}
+                }
             }},
             {"Route",                   new ButtonedTableSettings()
             {
@@ -66,13 +89,21 @@ namespace CourseWork.Pages.TourPart
                 {
                     (new RoutedEventHandler((s, e) => MainWindow.WindowFrame.Navigate(new TourConstituents((int)((s as Button).DataContext as DataRowView).Row[0], "RouteId", "Route"))), "Детальніше")
                 },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "Route", "RouteId")}
+                }
             }},
             {"TourMealType",            new LinkedTableSettings()
             {
                 headers =      new setting<string>[]     {"Id", "Тип", "Ціна"},
                 visibilities = new setting<Visibility>[] {(Visibility.Hidden, 0)},
                 readonlies =   new setting<bool>[]       {(true, 0)},
-                links = new setting<TableLink>[] { (new TableLink(GetDict("MealTypeId", "Type", ToTable("MealType")), "MealTypeId"), 1) }
+                links = new setting<TableLink>[] { (new TableLink(GetDict("MealTypeId", "Type", ToTable("MealType")), "MealTypeId"), 1) },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "MealType", "TourId", "MealTypeId")}
+                }
             }},
             {"Tour",                    new DatePickerTableSettings()
             {
@@ -86,6 +117,10 @@ namespace CourseWork.Pages.TourPart
                 {
                     (new TableLink(GetDict("RouteId", "Name", ToTable("Route")), "RouteId"), 1)
                 },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "Tour", "TourId")}
+                }
             }},
             {"InaccessibleCountries",   new DatePickerTableSettings()
             {
@@ -96,6 +131,10 @@ namespace CourseWork.Pages.TourPart
                 {
                     (new TableLink(GetDict("CountryId", "NameUA", ToTable("Country")), "CountryId"), 2)
                 },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "InaccessibleCountries", "CountryId", "DateFrom", "DateTo")}
+                }
             }},
             {"RouteMealType",           new LinkedTableSettings()
             {
@@ -105,6 +144,10 @@ namespace CourseWork.Pages.TourPart
                 links = new setting<TableLink>[]
                 {
                     (new TableLink(GetDict("MealTypeId", "Type", ToTable("MealType")), "MealTypeId"), 1)
+                },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "RouteMealType", "RouteID", "MealTypeId")}
                 }
             }},
             {"RouteAccomodation",       new LinkedTableSettings()
@@ -115,6 +158,10 @@ namespace CourseWork.Pages.TourPart
                 links = new setting<TableLink>[]
                 {
                     (new TableLink(GetDict("CityId", "CityName", ToTable("City")), "CityId"), 2)
+                },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "RouteAccomodation", "RAId", "InUse")}
                 }
             }},
             {"RouteService",            new LinkedTableSettings()
@@ -125,6 +172,10 @@ namespace CourseWork.Pages.TourPart
                 links = new setting<TableLink>[]
                 {
                     (new TableLink(GetDict("AddTypeId", "Type", ToTable("AdditionalType"), false), "AddTypeId"), 2)
+                },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "RouteService", "RSId")}
                 }
             }},
             {"RouteCountries",          new LinkedTableSettings()
@@ -135,6 +186,10 @@ namespace CourseWork.Pages.TourPart
                 {
                     new TableLink(GetDict("RouteId", "Name", ToTable("Route")), "RouteId"),
                     new TableLink(GetDict("CountryId", "NameUA", ToTable("Country")), "CountryId"),
+                },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "RouteCountries", "RouteId", "CountryId")}
                 }
             }},
             {"RouteTravelWays",         new LinkedTableSettings()
@@ -145,9 +200,31 @@ namespace CourseWork.Pages.TourPart
                 {
                     new TableLink(GetDict("RouteId", "Name", ToTable("Route")), "RouteId"),
                     new TableLink(GetDict("TravelWayId", "Name", ToTable("TravelWay")), "TravelWayId")
+                },
+                keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
+                {
+                    {Key.Delete, (s, e) => TryDelete(s, "RouteTravelWays", "RouteId", "TravelWayId")}
                 }
             }}
         };
+
+        private static void TryDelete(object grid, string tableName, params string[] columnName)
+        {
+            DataGrid _grid = grid as DataGrid;
+
+            if (_grid.SelectedItem is DataRowView row)
+            {
+                if(!TryDeleteById(tableName, string.Join(", ", columnName.Select(t => t + " = " + row[t]))))
+                {
+                    MessageBox.Show("Рядок не може бути видалено, бо він використовується");
+                    return;
+                }
+                row.Delete();
+            }
+        }
+
+        private static void InsertValues(string table, DataRow row, params string[] values)=> Insert(table, values.ToDictionary(t => t, v => row[v]));
+        private static void UpdateValues(string table, DataRow row, string conditon, params string[] values) => Update(table, values.ToDictionary(t => t, v => row[v]), conditon);
 
         private static string ToTable(string el) => $"[dbo].[{el}]";
         #endregion
@@ -187,14 +264,20 @@ namespace CourseWork.Pages.TourPart
             this.Loaded += (s, e) => CollectionComboBox.SelectedItem = collection.First();
         }
 
+        Action sourceChanged;
         private void LoadTable(string tableName)
         {
+            if (sourceChanged != null)
+                sourceChanged.Invoke();
+            MainTable.CanUserDeleteRows = false;
             MainTable.Columns.Clear();
             DataTable table = GetTable(String.Format(query, ToTable(tableName)));
             var setting = settings[tableName];
             setting.ReworkTable(table);
             MainTable.ItemsSource = table.DefaultView;
             setting.Apply(MainTable);
+
+            sourceChanged = setting.CallEvent;
         }
 
         private void SelectedTableChanged(object sender, SelectionChangedEventArgs e)
