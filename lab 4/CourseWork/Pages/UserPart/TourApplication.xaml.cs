@@ -17,6 +17,8 @@ namespace CourseWork.Pages.UserPart
     {
         const int BURNING_TOUR_DAYS = 5;
 
+        public bool ReverseIsEnabled { get; set; } = false;
+
         readonly Dictionary<string, int> countries = new Dictionary<string, int>();
         readonly Dictionary<string, int> ways = new Dictionary<string, int>();
         public List<string> countryFilter = new List<string>();
@@ -76,6 +78,8 @@ namespace CourseWork.Pages.UserPart
                 };
 
             ToursTable.Loaded += (s, e) => UpdatePossibleTours();
+
+            TravelWaysFilter.LayoutUpdated += (s, e) => ReverseIsEnabled = TravelWaysFilter.Children.Count != 0;
         }
 
 
@@ -113,7 +117,7 @@ namespace CourseWork.Pages.UserPart
         }
 
         #region filters
-        private void AddCountryLimit(object sender, RoutedEventArgs e) => AddToFilter(CountryFilter, countryFilter, CountryItemsCollection, (150, 125, 20, 25));
+        private void AddCountryLimit(object sender, RoutedEventArgs e) => AddToFilter(CountryFilter, countryFilter, CountryItemsCollection, (140, 100, 20, 25));
         private void AddWay(object sender, RoutedEventArgs e) => AddToFilter(TravelWaysFilter, wayFilter, TravelWaysItemsCollection, (105, 80, 20, 25));
         private void AddToFilter(StackPanel panel, List<string> filter, IEnumerable<string> source, (double pnl, double cmb, double btn, double hgt) sizes)
         {

@@ -32,14 +32,10 @@ namespace CourseWork.Pages.UserPart
             MainWindow.WindowFrame.Navigate(new TourApplication(id));
         }
 
-        private void OrderClick(object sender, RoutedEventArgs e)
-        {
-            MainWindow.WindowFrame.Navigate(new Orders(id));
-        }
-
         private void GetServices(object sender, RoutedEventArgs e)
         {
             Back.Visibility = Visibility.Visible;
+            ClientTable.IsReadOnly = true;
             var settings = new Pages.TourPart.LinkedTableSettings()
             {
                 headers = new setting<string>[] { "Тип", "Назва", "Ціна"},
@@ -79,33 +75,33 @@ namespace CourseWork.Pages.UserPart
             ClientTable.ItemsSource = table.DefaultView;
             ClientTable.Visibility = Visibility.Visible;
             ClientTable.CanUserAddRows = false;
+            ClientTable.IsReadOnly = true;
             settings.Apply(ClientTable);
+            //EventHandler<DataGridRowEventArgs> load = (s, e) =>
+            //{
+            //    DateTime start, end;
+            //    if (e.Row.Item is DataRowView row)
+            //    {
+            //        try
+            //        {
+            //            start = (DateTime)row.Row["Start"];
+            //            end = (DateTime)(e.Row.Item as DataRowView).Row["End"];
+            //            if (end < DateTime.Now)
+            //            {
+            //                e.Row.Background = Brushes.LightGray;
+            //            }
+            //            if (start < DateTime.Now && end > DateTime.Now)
+            //            {
+            //                e.Row.Background = Brushes.Gray;
+            //            }
+            //        }
+            //        catch { }
 
-            EventHandler<DataGridRowEventArgs> load = (s, e) =>
-            {
-                DateTime start, end;
-                if (e.Row.Item is DataRowView row)
-                {
-                    try
-                    {
-                        start = (DateTime)row.Row["Start"];
-                        end = (DateTime)(e.Row.Item as DataRowView).Row["End"];
-                        if (end < DateTime.Now)
-                        {
-                            e.Row.Background = Brushes.LightGray;
-                        }
-                        if (start < DateTime.Now && end > DateTime.Now)
-                        {
-                            e.Row.Background = Brushes.Gray;
-                        }
-                    }
-                    catch { }
-
-                }
-            };
-            ClientTable.LoadingRow += load;
-            ClientTable.SourceUpdated += (s, e) => 
-            ClientTable.LoadingRow -= load;
+            //    }
+            //};
+            //ClientTable.LoadingRow += load;
+            //ClientTable.SourceUpdated += (s, e) => 
+            //ClientTable.LoadingRow -= load;
         }
     }
 }

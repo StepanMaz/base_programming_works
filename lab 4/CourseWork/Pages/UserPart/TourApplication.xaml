@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:CourseWork.Pages.UserPart"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TourApplication">
+      Title="TourApplication"
+      x:Name="thisWindow">
     <Page.Resources>
 
     </Page.Resources>
@@ -27,7 +28,7 @@
                 <TextBlock TextWrapping="Wrap" Width="40" Margin="0,35,0,0" TextAlignment="Center" FontSize="20" Height="25" VerticalAlignment="Top" HorizontalAlignment="Center"><Run Language="uk-ua" Text="─"/></TextBlock>
             </Grid>
             <ScrollViewer Height="160" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,140,0,0">
-                <StackPanel x:Name="CountryFilter" Background="{StaticResource CreamColor}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0">
+                <StackPanel x:Name="CountryFilter" Background="{StaticResource Light}" Margin="0,0,0,0">
                     <Button x:Name="AddButton" Click="AddCountryLimit" Height="25" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="25">
                         <Button.Background>
                             <ImageBrush ImageSource="/Pages/UserPart/addimage.png"/>
@@ -41,7 +42,7 @@
                 </StackPanel>
             </ScrollViewer>
             <ScrollViewer Height="40" Margin="0,310,0,0" Width="230" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right" VerticalAlignment="Top">
-                <StackPanel x:Name="TravelWaysFilter" Background="{StaticResource CreamColor}" Orientation="Horizontal">
+                <StackPanel x:Name="TravelWaysFilter" Background="{StaticResource Light}" Orientation="Horizontal">
                     <Button x:Name="AddTravelWay" Click="AddWay" Height="25" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="25">
                         <Button.Background>
                             <ImageBrush ImageSource="/Pages/UserPart/addimage.png"/>
@@ -54,7 +55,7 @@
                     </Button>
                 </StackPanel>
             </ScrollViewer>
-            <Button Click="ReverseClick" Content="Викл" FontSize="10" Width="40" Height="40" Style="{StaticResource MiddleSizedButton}" Margin="20,310,0,30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button Click="ReverseClick" Content="Викл" IsEnabled="{Binding ReverseIsEnabled, ElementName=thisWindow}" FontSize="10" Width="40" Height="40" Style="{StaticResource MiddleSizedButton}" Margin="20,310,0,30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Grid>
         <DataGrid x:Name="ToursTable" IsReadOnly="True" Width="400" Height="180" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="35,0,0,0"/>
         <TextBlock Text="Немає турів" TextWrapping="Wrap" Visibility="Hidden" Style="{StaticResource Title Test}" Margin="35,135,365,135" Width="160" Height="30"/>

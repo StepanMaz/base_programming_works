@@ -16,6 +16,9 @@
     <Compile Update="Pages\ReportPart\ReportPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\TourPart\ImageInput.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\TourPart\TourConstituents.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,7 +31,7 @@
     <Compile Update="Pages\UserPart\Documents.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\UserPart\Orders.xaml.cs">
+    <Compile Update="Pages\UserPart\NewClientAdding.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\UserPart\TasksPage.xaml.cs">
@@ -54,6 +57,9 @@
     <Page Update="Pages\ReportPart\ReportPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\TourPart\ImageInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\TourPart\TourConstituents.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -66,7 +72,7 @@
     <Page Update="Pages\UserPart\Documents.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\UserPart\Orders.xaml">
+    <Page Update="Pages\UserPart\NewClientAdding.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\TasksPage.xaml">

@@ -64,6 +64,14 @@ namespace CourseWork.Pages.TourPart
 
         private void InitEvents()
         {
+            if(keyPresses != null)
+            {
+                if(!keyPresses.ContainsKey(Key.Enter))
+                    keyPresses.Add(Key.Enter, (s, e) => grid.CommitEdit());
+                if (!keyPresses.ContainsKey(Key.Escape))
+                    keyPresses.Add(Key.Escape, (s, e) => { grid.CancelEdit(); grid.UnselectAllCells(); grid.UnselectAll(); });
+            }
+
             KeyEventHandler del =
                 (s, e) =>
                 {
@@ -86,14 +94,13 @@ namespace CourseWork.Pages.TourPart
         {
             (sender as DataGrid).RowEditEnding -= EditEnded;
             grid.CommitEdit();
+            grid.UnselectAll();
             if (e.Row.IsNewItem)
-                insert.Invoke(sender, e);
+                insert?.Invoke(sender, e);
             else
-                update.Invoke(sender, e);
+                update?.Invoke(sender, e);
             (sender as DataGrid).RowEditEnding += EditEnded;
         }
-
-        public virtual void ReworkTable(DataTable table) { }
 
         protected void Iterate<type>(setting<type>[] array, Action<int, type> action)
         {
@@ -152,9 +159,20 @@ namespace CourseWork.Pages.TourPart
             datePickerFactoryElem.SetValue(DatePicker.IsEnabledProperty, !@readonly);
             DataTemplate cellTemplate = new DataTemplate();
             cellTemplate.VisualTree = datePickerFactoryElem;
-            DataGridTemplateColumn templateColumn = new DataGridTemplateColumn();
+            DataGridDateColumn templateColumn = new DataGridDateColumn();
             templateColumn.CellTemplate = cellTemplate;
+
             return templateColumn;
+        }
+    }
+
+    public class DataGridDateColumn : DataGridTemplateColumn
+    {
+        protected override object PrepareCellForEdit(FrameworkElement editingElement,
+                                                     RoutedEventArgs editingEventArgs)
+        {
+            editingElement.MoveFocus(new TraversalRequest(FocusNavigationDirection.First));
+            return base.PrepareCellForEdit(editingElement, editingEventArgs);
         }
     }
 
@@ -186,77 +204,69 @@ namespace CourseWork.Pages.TourPart
 
     public class ImageTableSettins : ButtonedTableSettings
     {
-        public setting<(string source, string column)>[] images;
+        public setting<string>[] images;
 
         public override void Apply(DataGrid dataGrid)
         {
             grid ??= dataGrid;
             columns ??= dataGrid.Columns;
 
-            Iterate(images, (i, v) => columns[i] = GetImageColumn(i.ToString(), v));
+            Iterate(images, (i, v) => columns[i] = GetImageColumn(v));
 
             base.Apply(dataGrid);
         }
 
-        public override void ReworkTable(DataTable table)
-        {
-            foreach (var item in Reorganize(images))
-            {
-                table.Columns.RemoveAt((int)item.pos);
-                var column = new DataColumn($"{item.pos}", typeof(BitmapFrame));
-                table.Columns.Add(column);
-                column.SetOrdinal((int)item.pos);
-            }
-        }
-
-        public DataGridTemplateColumn GetImageColumn(string columnNumber, setting<(string source, string column)> src)
+        public DataGridTemplateColumn GetImageColumn(string columnName)
         {
             FrameworkElementFactory image = new FrameworkElementFactory(typeof(Image));
             DataTemplate cellTemplate = new DataTemplate();
             cellTemplate.VisualTree = image;
-            Binding binding = new Binding(columnNumber);
+            Binding binding = new Binding(columnName) { Converter = new ImageConvertor()};
             image.SetValue(Image.SourceProperty, binding);
             DataGridTemplateColumn templateColumn = new DataGridTemplateColumn();
-            templateColumn.Header = columnNumber;
+            templateColumn.Header = columnName;
             templateColumn.CellTemplate = cellTemplate;
             templateColumn.Width = 100;
 
-            EventHandler<DataGridRowEventArgs> handler = (s, e) =>
-                {
-                    DataRowView row = e?.Row?.Item as DataRowView;
+            var style = new Style(typeof(DataGridCell));
+            style.Setters.Add(new EventSetter(DataGridCell.PreviewMouseDoubleClickEvent, new MouseButtonEventHandler((s, e) => Beginedit(s, e, columnName))));
 
-                    if (row != null)
-                    {
-                        try
-                        {
-                            row.Row[columnNumber] = DataConverter.GetImageFromByteArray(GetObject<byte[]>(src.value.source + $" WHERE {src.value.column} = " + row.Row[src.value.column]));
-
-                        }
-                        catch { }
-                    }
-                };
-            EventHandler<DataGridRowEventArgs> unloadhandler = (s, e) =>
-             {
-                 DataRowView row = e?.Row?.Item as DataRowView;
-
-                 if (row != null)
-                 {
-                     try
-                     {
-                         row.Row[columnNumber] = null;
-                     }
-                     catch { }
-                 }
-             };
-            grid.LoadingRow += handler;
-            grid.UnloadingRow += unloadhandler;
-            sourceChanged += (s, e) =>
-            {
-                grid.LoadingRow -= handler;
-                grid.UnloadingRow -= unloadhandler;
-            };
+            templateColumn.CellStyle = style;
 
             return templateColumn;
+        }
+
+        public void Beginedit(object sender, MouseButtonEventArgs e, string columnName)
+        {
+            var gridrow = DataGridRow.GetRowContainingElement(e.Source as DataGridCell);
+            var row = gridrow.Item as DataRowView;
+            if(row != null)
+            {
+                var datarow = row.Row;
+                new ImageInput(
+                        (status, image) =>
+                        {
+                            if (status == ImageInput.Status.Succeed)
+                            {
+                                datarow[columnName] = image;
+                            }
+                        }).ShowDialog();
+            }
+        }
+
+        public class ImageConvertor : IValueConverter
+        {
+            public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                if (value.GetType() == typeof(System.DBNull))
+                    return null;
+                return CourseWork.DataConverter.GetImageFromByteArray((byte[])value);
+            }
+
+            public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+            {
+                throw new NotImplementedException();
+            }
         }
     }
     #endregion

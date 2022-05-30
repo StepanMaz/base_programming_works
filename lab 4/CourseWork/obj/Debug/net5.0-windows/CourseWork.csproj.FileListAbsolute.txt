@@ -68,7 +68,6 @@ D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-wi
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.g.cs
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Client.g.cs
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Documents.g.cs
-D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Orders.g.cs
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TasksPage.g.cs
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TourApplication.g.cs
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserNav.g.cs
@@ -83,7 +82,6 @@ D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-wi
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.baml
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Client.baml
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Documents.baml
-D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Orders.baml
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TasksPage.baml
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TourApplication.baml
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserNav.baml
@@ -105,3 +103,7 @@ D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-wi
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.ResolveComReference.cache
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\example.docx
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\ImageInput.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\ImageInput.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\NewClientAdding.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\NewClientAdding.baml

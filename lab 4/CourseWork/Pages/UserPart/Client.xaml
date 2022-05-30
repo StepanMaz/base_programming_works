@@ -12,7 +12,6 @@
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,0,0,0">
             <Button Click="DocumntsClick" Content="Документи" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
             <Button Click="AddTourClick" Content="Додати тур" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
-            <Button Click="OrderClick" Content="Замовлення" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
             <Button Click="ToursClick" Content="Тури" Width="120" Style="{StaticResource MiddleSizedButton}" Margin="0,5,0,0"/>
         </StackPanel>
         <DataGrid x:Name="ClientTable" Height="300" Width="400" Visibility="Hidden"/>

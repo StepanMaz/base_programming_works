@@ -27,9 +27,6 @@ namespace CourseWork.Pages.UserPart
 
         private void UserClick(object sender, RoutedEventArgs e) => MainWindow.WindowFrame.Navigate(new UserPage());
 
-        private void AddClientClick(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void AddClientClick(object sender, RoutedEventArgs e) => MainWindow.WindowFrame.Navigate(new NewClientAdding());
     }
 }
