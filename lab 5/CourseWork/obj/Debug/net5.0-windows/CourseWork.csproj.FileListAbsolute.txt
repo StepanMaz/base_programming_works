@@ -1,0 +1,113 @@
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.AssemblyReference.cache
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\MainPage.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\App.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork_MarkupCompile.cache
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork_MarkupCompile.lref
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\CourseWork.exe
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\CourseWork.deps.json
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\CourseWork.runtimeconfig.json
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\CourseWork.runtimeconfig.dev.json
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\CourseWork.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\ref\CourseWork.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\CourseWork.pdb
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\App.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\MainPage.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.g.resources
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.AssemblyInfoInputs.cache
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.AssemblyInfo.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.CoreCompileInputs.cache
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\ref\CourseWork.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.pdb
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.genruntimeconfig.cache
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.CopyComplete
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserNav.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserPage.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserNav.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserPage.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TasksPage.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TasksPage.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Client.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Client.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Documents.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Documents.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TourApplication.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TourApplication.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\TourConstituents.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\TourConstituents.baml
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Orders.g.cs
+D:\Для_учебы\base_programming_works\CourseWork\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Orders.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\CourseWork.exe
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\CourseWork.deps.json
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\CourseWork.runtimeconfig.json
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\CourseWork.runtimeconfig.dev.json
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\CourseWork.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\ref\CourseWork.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\CourseWork.pdb
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.AssemblyReference.cache
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\MainPage.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\TourConstituents.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Client.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Documents.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TasksPage.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TourApplication.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserNav.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserPage.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\App.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork_MarkupCompile.cache
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork_MarkupCompile.lref
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\App.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\MainPage.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\TourConstituents.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\ApplymentOnTourPage.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Client.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\Documents.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TasksPage.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\TourApplication.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserNav.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\UserPage.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.g.resources
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.AssemblyInfoInputs.cache
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.AssemblyInfo.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.CoreCompileInputs.cache
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.CopyComplete
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\ref\CourseWork.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.pdb
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.genruntimeconfig.cache
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\ReportPart\ReportPage.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\ReportPart\ReportPage.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Core.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\CourseWork.csproj.ResolveComReference.cache
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\bin\Debug\net5.0-windows\example.docx
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\ImageInput.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\ImageInput.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\NewClientAdding.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\NewClientAdding.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\PassportRegistration.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\PassportRegistration.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\VisaRegistration.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\VisaRegistration.baml

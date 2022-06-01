@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReportPart\ReportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\TourPart\ImageInput.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\TourPart\TourConstituents.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\ApplymentOnTourPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\Client.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\Documents.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\NewClientAdding.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\PassportRegistration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\TasksPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\TourApplication.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\UserNav.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\UserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\VisaRegistration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReportPart\ReportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TourPart\ImageInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\TourPart\TourConstituents.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\ApplymentOnTourPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\Client.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\Documents.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\NewClientAdding.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\PassportRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\TasksPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\TourApplication.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\UserNav.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\UserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\VisaRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

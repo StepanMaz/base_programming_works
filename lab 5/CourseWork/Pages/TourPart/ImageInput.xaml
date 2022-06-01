@@ -1,0 +1,22 @@
+﻿<Window x:Class="CourseWork.Pages.TourPart.ImageInput"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork.Pages.TourPart"
+        mc:Ignorable="d"
+        Title="ImageInput" Height="370" Width="300" ResizeMode="NoResize">
+    <Grid Background="{StaticResource Dark}">
+        <StackPanel>
+            <Image x:Name="ImageShower" Height="100" Width="200" Margin="0,10,0,0"/>
+            <TextBox x:Name="UrlText" Text="url to png or jpg" TextWrapping="Wrap" Width="120" Margin="0,10,0,0" TextAlignment="Center" Height="30"/>
+            <Button Click="SubmitUrlClick" Content="Загрузити" Height="40" Margin="0,5,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Button Click="DialogClick"       Content="З диску"   Height="40" Margin="0,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal"  Margin="0,25,0,0" HorizontalAlignment="Center">
+                <Button Click="CancelButtonClick" Content="Відмінити" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                <Button x:Name="SubmitButton" Click="SubmitButtonClick" Width="0" Content="Підтвердити" Height="40" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
