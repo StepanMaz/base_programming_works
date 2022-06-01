@@ -34,6 +34,9 @@
     <Compile Update="Pages\UserPart\NewClientAdding.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\UserPart\PassportRegistration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\UserPart\TasksPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -44,6 +47,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\UserPart\UserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserPart\VisaRegistration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -75,6 +81,9 @@
     <Page Update="Pages\UserPart\NewClientAdding.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\UserPart\PassportRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\UserPart\TasksPage.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -85,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\UserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserPart\VisaRegistration.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

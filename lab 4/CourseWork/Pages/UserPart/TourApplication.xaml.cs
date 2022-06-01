@@ -91,7 +91,7 @@ namespace CourseWork.Pages.UserPart
             string countriesList = string.Join(",", countryFilter.Select(t => countries[t]));
             string travelWaysList = string.Join(",", wayFilter.Select(t => ways[t]));
             DataTable table = GetTable(
-                $"SELECT * FROM dbo.GetPossibleTours('{countriesList}', '{travelWaysList}', '{start}', '{end}', {ToPrice(ButtomPrice, "0")}, {ToPrice(TopPrice, "0")}, {(reverse ? 1 : 0)})");
+                $"SELECT * FROM dbo.GetPossibleTours('{countriesList}', '{travelWaysList}', '{start}', '{end}', {ToPrice(ButtomPrice, "0")}, {ToPrice(TopPrice, "0")}, {(reverse ? 1 : 0)}) WHERE TourId NOT IN (SELECT TourId FROM ClientTour WHERE ClientId = {id})");
             ToursTable.Columns.Clear();
             ToursTable.ItemsSource = table.DefaultView;
             settings.Apply(ToursTable);

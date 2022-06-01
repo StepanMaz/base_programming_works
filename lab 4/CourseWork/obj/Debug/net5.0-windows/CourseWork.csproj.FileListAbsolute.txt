@@ -107,3 +107,7 @@ D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-wi
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\TourPart\ImageInput.baml
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\NewClientAdding.g.cs
 D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\NewClientAdding.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\PassportRegistration.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\PassportRegistration.baml
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\VisaRegistration.g.cs
+D:\Для_учебы\base_programming_works\lab 4\CourseWork\obj\Debug\net5.0-windows\Pages\UserPart\VisaRegistration.baml

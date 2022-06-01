@@ -25,12 +25,5 @@ namespace CourseWork.Pages.ReportPart
         {
             InitializeComponent();
         }
-
-        private void Foo(object sender, RoutedEventArgs e)
-        {
-            var r = Additionals.DocumentOperations.ReplaceInDocument(AppDomain.CurrentDomain.BaseDirectory + @"\example.docx", new Dictionary<string, string>() { {"{Title}", "Титул" }, { "{Info1}", "f1" } , { "{Info2}", "f2" }, { "{Info3}", "f3" } });
-            if (!r)
-                MessageBox.Show("Hah");
-        }
     }
 }

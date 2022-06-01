@@ -9,9 +9,11 @@
       Title="Documents">
 
     <Grid>
-        <DataGrid x:Name="PassportsTable"  Width="250" Height="300" Margin="75,75,0,75" HorizontalAlignment="Left"/>
-        <DataGrid x:Name="VisaTable"       Width="250" Height="300" Margin="0,75,75,75" HorizontalAlignment="Right"/>
+        <DataGrid x:Name="PassportsTable"  Width="330" Height="300" Margin="50,75,0,75" HorizontalAlignment="Left"/>
+        <DataGrid x:Name="VisaTable"       Width="330" Height="300" Margin="0,75,50,75" HorizontalAlignment="Right"/>
         <TextBlock x:Name="NoPassports" Visibility="Hidden" Text="Немає паспортів" TextWrapping="Wrap" Width="200" Height="47" FontSize="20" TextAlignment="Center" Margin="100,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
         <TextBlock x:Name="NoVisas"     Visibility="Hidden" Text="Немає віз"       TextWrapping="Wrap" Width="200" Height="47" FontSize="20" TextAlignment="Center" Margin="0,210,100,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <Button Click="AddPassportClick" Content="Додати паспорт" FontSize="12" HorizontalAlignment="Left" Margin="150,0,0,20" VerticalAlignment="Bottom" Height="40" Width="100"/>
+        <Button Click="AddVisaClick" Content="Додати візу"    FontSize="12" HorizontalAlignment="Right" Margin="0,0,150,20" VerticalAlignment="Bottom" Height="40" Width="100"/>
     </Grid>
 </Page>

@@ -9,7 +9,8 @@
       Title="ReportPage">
 
     <Grid>
-        <Button Click="Foo" Content="Button" Height="40"/>
+        <Button Content="Тури" Height="40" Margin="70,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button Content="Документи" Height="40" Margin="220,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
     </Grid>
 </Page>

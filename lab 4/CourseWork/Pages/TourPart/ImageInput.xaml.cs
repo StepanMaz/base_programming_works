@@ -27,7 +27,7 @@ namespace CourseWork.Pages.TourPart
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "pngs (*.png)|*.txt|jpgs (*.jpg or *.jpeg)|*.jpg;*.jpeg";
+                dialog.Filter = "pngs (*.png)|*.png|jpgs (*.jpg or *.jpeg)|*.jpg;*.jpeg";
                 if (dialog.ShowDialog() == true)
                 {
                     image = File.ReadAllBytes(dialog.FileName);

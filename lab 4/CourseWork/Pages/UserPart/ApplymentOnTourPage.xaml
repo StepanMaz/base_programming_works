@@ -12,6 +12,10 @@
         <DataGrid x:Name="ServiceTable" Height="330" Margin="50,30,0,0" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <DataGrid x:Name="MealTypesTable" Width="300" Height="165" Margin="0,30,50,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
         <Button x:Name="SubmitButton" Click="ApplyToTourClick" Style="{StaticResource MiddleSizedButton}" Margin="0,365,0,0" Height="40" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Button Click="GetDetailInfo" FontSize="16" Content="Детальна інформація про тур" Height="40" Width="260" Margin="470,255,70,155"/>
+        <Button Click="GetDetailInfo" FontSize="16" Content="Детальна інформація про тур" Height="40" Width="260" Margin="470,0,0,160" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        <Grid Margin="450,295,0,0" Width="300" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Паспорт для віз: " FontSize="18" Width="140" HorizontalAlignment="Left"/>
+            <ComboBox x:Name="Passport" Width="160" HorizontalAlignment="Right"/>
+        </Grid>
     </Grid>
 </Page>

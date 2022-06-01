@@ -55,8 +55,9 @@ namespace CourseWork.Additionals
 
         public static bool ReplaceInDocument(string path, Dictionary<string, string> replacements)
         {
+            path = AppDomain.CurrentDomain.BaseDirectory + path;
             var wordAap = new Word.Application();
-            var doc = wordAap.Documents.Open(path);
+            var doc = wordAap.Documents.Add(path);
 
             var range = doc.Range();
 

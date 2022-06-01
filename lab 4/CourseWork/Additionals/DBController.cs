@@ -72,6 +72,19 @@ namespace CourseWork
             }
         }
 
+        public static SqlDataReader GetReader(string command)
+        {
+            try
+            {
+                return new SqlCommand(command, sqlConnection).ExecuteReader();
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+
+        }
+
         public static bool TryDeleteById(string table, string condition)
         {
             try
