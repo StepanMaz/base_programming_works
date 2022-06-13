@@ -9,8 +9,8 @@
       Title="ReportPage">
 
     <Grid>
-        <Button Content="Тури" Height="40" Margin="70,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Button Content="Документи" Height="40" Margin="220,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button Click="ToursClick"  Content="Всі тури" Height="40" Margin="0,0,0,50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Click="PopularToursClick" Content="Популярні тури" Height="40" Margin="0,50,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
     </Grid>
 </Page>

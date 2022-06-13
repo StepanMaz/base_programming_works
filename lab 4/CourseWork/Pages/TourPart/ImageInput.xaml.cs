@@ -5,9 +5,6 @@ using System.Windows;
 
 namespace CourseWork.Pages.TourPart
 {
-    /// <summary>
-    /// Interaction logic for ImageInput.xaml
-    /// </summary>
     public partial class ImageInput : Window
     {
         public Status status;

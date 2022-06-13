@@ -8,8 +8,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
-using static CourseWork.DBController;
 
 namespace CourseWork.Pages.TourPart
 {

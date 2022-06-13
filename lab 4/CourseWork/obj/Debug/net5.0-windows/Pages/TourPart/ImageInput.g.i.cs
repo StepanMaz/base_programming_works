@@ -77,7 +77,7 @@ namespace CourseWork.Pages.TourPart {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/pages/tourpart/imageinput.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CourseWork;V1.0.0.0;component/pages/tourpart/imageinput.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\TourPart\ImageInput.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Linq;
+﻿using System.Data;
 using System.Windows;
-using System.Windows.Data;
-using System.Windows.Media;
 using System.Windows.Controls;
-using System.Collections.Generic;
-using System.Windows.Media.Imaging;
 using CourseWork.Pages.TourPart;
 
 using static CourseWork.DBController;
@@ -41,7 +35,7 @@ namespace CourseWork.Pages.UserPart
                 headers = new setting<string>[] { "Тип", "Назва", "Ціна"},
                 links = new setting<TableLink>[]
                 {
-                    new TableLink(Pages.TourPart.TourConstituents.GetDict("AddTypeId", "Type", "AdditionalType", false), "AddTypeId")
+                    new TableLink(Pages.TourPart.TourConstituents.GetDict("AddTypeId", "Type", "AdditionalType"), "AddTypeId")
                 }
             };
             var id = ((sender as Button).DataContext as DataRowView).Row["CTId"];
@@ -77,31 +71,6 @@ namespace CourseWork.Pages.UserPart
             ClientTable.CanUserAddRows = false;
             ClientTable.IsReadOnly = true;
             settings.Apply(ClientTable);
-            //EventHandler<DataGridRowEventArgs> load = (s, e) =>
-            //{
-            //    DateTime start, end;
-            //    if (e.Row.Item is DataRowView row)
-            //    {
-            //        try
-            //        {
-            //            start = (DateTime)row.Row["Start"];
-            //            end = (DateTime)(e.Row.Item as DataRowView).Row["End"];
-            //            if (end < DateTime.Now)
-            //            {
-            //                e.Row.Background = Brushes.LightGray;
-            //            }
-            //            if (start < DateTime.Now && end > DateTime.Now)
-            //            {
-            //                e.Row.Background = Brushes.Gray;
-            //            }
-            //        }
-            //        catch { }
-
-            //    }
-            //};
-            //ClientTable.LoadingRow += load;
-            //ClientTable.SourceUpdated += (s, e) => 
-            //ClientTable.LoadingRow -= load;
         }
     }
 }

@@ -93,7 +93,7 @@ namespace CourseWork.Pages.UserPart {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CourseWork;component/pages/userpart/newclientadding.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CourseWork;V1.0.0.0;component/pages/userpart/newclientadding.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\UserPart\NewClientAdding.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

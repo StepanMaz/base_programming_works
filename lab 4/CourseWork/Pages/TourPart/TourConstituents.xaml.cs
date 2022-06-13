@@ -30,8 +30,8 @@ namespace CourseWork.Pages.TourPart
                 {
                     {Key.Delete, (s, e) => TryDelete(s, "MealType", "MealTypeId")}
                 },
-                insert = new EventHandler<DataGridRowEditEndingEventArgs>((s, e) => InsertValues("MealType", (e.Row.Item as DataRowView).Row, new (string, object)[]{GetMaxId("MealType","MealTypeId") }, "Abbreviation", "Type", "Description", "InUse")),
-                update = new EventHandler<DataGridRowEditEndingEventArgs>((s, e) => UpdateValues("MealType", (e.Row.Item as DataRowView).Row, $"MealTypeId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "Abbreviation", "Type", "Description", "InUse"))
+                insert = new EventHandler<DataGridRowEditEndingEventArgs>((s, e) => InsertValues("MealType", (e.Row.Item as DataRowView).Row, new (string, object)[]{GetMaxId("MealType","MealTypeId") }, "Abbreviation", "Type", "Description")),
+                update = new EventHandler<DataGridRowEditEndingEventArgs>((s, e) => UpdateValues("MealType", (e.Row.Item as DataRowView).Row, $"MealTypeId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "Abbreviation", "Type", "Description"))
             }},
             {"TravelWay",               new TableSettings()
             {
@@ -47,19 +47,19 @@ namespace CourseWork.Pages.TourPart
             }},
             {"AdditionalType",          new TableSettings()
             {
-                headers =      new setting<string>[]     {"Id", "Тип", "У використанні"},
+                headers =      new setting<string>[]     {"Id", "Тип"},
                 visibilities = new setting<Visibility>[] {(Visibility.Hidden, 0)},
                 readonlies =   new setting<bool>[]       {(true, 0)},
                 keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
                 {
                     {Key.Delete, (s, e) => TryDelete(s, "AdditionalType", "AddTypeId")}
                 },
-                insert = (s, e) => InsertValues("AdditionalType", (e.Row.Item as DataRowView).Row, new (string, object)[]{GetMaxId("AdditionalType","AddTypeId") }, "Type", "InUse"),
-                update = (s, e) => UpdateValues("AdditionalType", (e.Row.Item as DataRowView).Row, $"AddTypeId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "Type", "InUse")
+                insert = (s, e) => InsertValues("AdditionalType", (e.Row.Item as DataRowView).Row, new (string, object)[]{GetMaxId("AdditionalType","AddTypeId") }, "Type"),
+                update = (s, e) => UpdateValues("AdditionalType", (e.Row.Item as DataRowView).Row, $"AddTypeId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "Type")
             }},
             {"City",                    new ImageTableSettins()
             {
-                headers =      new setting<string>[]     {"Id", "Країна", "Назва", "Зображення", "У використанні"},
+                headers =      new setting<string>[]     {"Id", "Країна", "Назва", "Зображення"},
                 visibilities = new setting<Visibility>[] {(Visibility.Hidden, 0)},
                 readonlies =   new setting<bool>[]       {(true, 0)},
                 lengths = new setting<DataGridLength>[] {(100, 1)},
@@ -72,12 +72,12 @@ namespace CourseWork.Pages.TourPart
                 {
                     {Key.Delete, (s, e) => TryDelete(s, "City", "CityId")}
                 },
-                insert = (s, e) => InsertValues("City", (e.Row.Item as DataRowView).Row, new (string, object)[]{ GetMaxId("City","CityId") }, "CountryID", "CityName", "Image", "InUse"),
-                update = (s, e) => UpdateValues("City", (e.Row.Item as DataRowView).Row, $"CityId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "CountryID", "CityName", "Image", "InUse")
+                insert = (s, e) => InsertValues("City", (e.Row.Item as DataRowView).Row, new (string, object)[]{ GetMaxId("City","CityId") }, "CountryID", "CityName", "Image"),
+                update = (s, e) => UpdateValues("City", (e.Row.Item as DataRowView).Row, $"CityId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "CountryID", "CityName", "Image")
             }},
             {"Country",                 new ImageTableSettins()
             {
-                headers =      new setting<string>[]     {"", "Назва", "Прапор", "У використанні"},
+                headers =      new setting<string>[]     {"", "Назва", "Прапор"},
                 buttons = new setting<(RoutedEventHandler handler, string name)>[]
                 {
                     (new RoutedEventHandler((s, e) =>
@@ -92,8 +92,8 @@ namespace CourseWork.Pages.TourPart
                 {
                     {Key.Delete, (s, e) => TryDelete(s, "Country", "CountryId")}
                 },
-                insert = (s, e) => InsertValues("Country", (e.Row.Item as DataRowView).Row, new (string, object)[]{GetMaxId("Country","CountryId") }, "NameUA", "Image", "InUse"),
-                update = (s, e) => UpdateValues("Country", (e.Row.Item as DataRowView).Row, $"CountryId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "NameUA", "Image", "InUse")
+                insert = (s, e) => InsertValues("Country", (e.Row.Item as DataRowView).Row, new (string, object)[]{GetMaxId("Country","CountryId") }, "NameUA", "Image"),
+                update = (s, e) => UpdateValues("Country", (e.Row.Item as DataRowView).Row, $"CountryId = {(e.Row.Item as DataRowView).Row.ItemArray[0]}", "NameUA", "Image")
             }},
             {"Route",                   new ButtonedTableSettings()
             {
@@ -205,7 +205,7 @@ namespace CourseWork.Pages.TourPart
                 readonlies =   new setting<bool>[]       {(true, 0), (true, 1)},
                 links = new setting<TableLink>[]
                 {
-                    (new TableLink(GetDict("AddTypeId", "Type", ToTable("AdditionalType"), false), "AddTypeId"), 2)
+                    (new TableLink(GetDict("AddTypeId", "Type", ToTable("AdditionalType")), "AddTypeId"), 2)
                 },
                 keyPresses = new Dictionary<Key, Action<object, KeyEventArgs>>
                 {
@@ -268,13 +268,13 @@ namespace CourseWork.Pages.TourPart
 
         private static void InsertValues(string table, DataRow row, (string, object)[] Idfield, params string[] values)
         {
-            if (Idfield == null)
-                return;
             var dic = values.ToDictionary(t => t, v => row[v.Trim('[', ']')]);
-            foreach (var item in Idfield)
-            {
-                dic.Add(item.Item1, item.Item2);
-            }
+            if (Idfield != null)
+                foreach (var item in Idfield)
+                {
+                    dic.Add(item.Item1, item.Item2);
+                }
+
             if (!Insert(table, dic))
             {
                 MessageBox.Show("Некоректні данні");
@@ -317,9 +317,9 @@ namespace CourseWork.Pages.TourPart
         #endregion
 
         #region Additionals
-        public static Dictionary<int, string> GetDict(string keyColumn, string valueColumn, string tableName, bool inUse = true)
+        public static Dictionary<int, string> GetDict(string keyColumn, string valueColumn, string tableName)
         {
-            string command = $"SELECT {keyColumn}, {valueColumn} FROM {tableName} {(inUse ? "" : "Where inUse = 1")}";
+            string command = $"SELECT {keyColumn}, {valueColumn} FROM {tableName}";
             return GetTable(command).
                           AsEnumerable().
                           ToDictionary(t => (int)t[0], v => (string)v[1]);

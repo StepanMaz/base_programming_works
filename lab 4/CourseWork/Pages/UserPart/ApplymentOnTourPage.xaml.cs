@@ -39,7 +39,7 @@ namespace CourseWork.Pages.UserPart
 
             valuesUpdated += () => price = GetObject<int>($"SELECT dbo.GetPriceForTour({TourId}, {ClientId}, {MealTypeId}, '{string.Join(",", services)}')");
             valuesUpdated += () => sale = GetObject<decimal>($"SELECT dbo.GetClientSale({ClientId})");
-            valuesUpdated += () => SubmitButton.Content = String.Format(UPDATE_BUTTON_TEXT, price, sale);
+            valuesUpdated += () => SubmitButton.Content = String.Format(UPDATE_BUTTON_TEXT, (price * (100 - sale) / 100), sale);
 
             valuesUpdated.Invoke();
 
@@ -229,11 +229,11 @@ namespace CourseWork.Pages.UserPart
 
             var clienttoue = new Dictionary<string, object>
             {
-                { "ClientId",           ClientId       },
-                { "TourId",             TourId         },
-                { "ApplicationDate",    DateTime.Today },
-                { "FullPrice",          price          },
-                { "MealTypeId",         MealTypeId     }
+                { "ClientId",           ClientId                    },
+                { "TourId",             TourId                      },
+                { "ApplicationDate",    DateTime.Today              },
+                { "FullPrice",          price * (100 - sale) / 100  },
+                { "MealTypeId",         MealTypeId                  }
             };
             List<string> message = new List<string>();
 

@@ -37,9 +37,6 @@
     <Compile Update="Pages\UserPart\PassportRegistration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\UserPart\TasksPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Pages\UserPart\TourApplication.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -82,9 +79,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\PassportRegistration.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Pages\UserPart\TasksPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\UserPart\TourApplication.xaml">
